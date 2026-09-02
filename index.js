@@ -4,6 +4,7 @@ import Header from "./Component/Header";
 import Body from "./Component/Body";
 import About from "./Component/About";
 import Connect from "./Component/Connect";
+import Restocard from "./Component/Restocard";
 import Careers from "./Component/Careers";
 import Error from "./Component/Error";
 
@@ -38,6 +39,10 @@ const AppRootData = createBrowserRouter([
       {
         path: "/connect",
         element: <Connect />,
+      },
+      {
+        path: "/resto/:resId",
+        element: <Restocard />,
       },
     ],
     errorElement: <Error />,
