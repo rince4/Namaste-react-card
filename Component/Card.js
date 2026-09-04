@@ -1,4 +1,4 @@
-import { BGLOGO } from "../Util/Constance";
+import { IMG_URL } from "../Util/Constance";
 
 const Card = (props) => {
   const { name, locality, cuisines, costForTwo, avgRating, cloudinaryImageId } =
@@ -9,16 +9,10 @@ const Card = (props) => {
   hover:scale-105"
     >
       <div>
-        <img
-          className="w-50"
-          src={
-            "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1600,h_640,c_fill/" +
-            cloudinaryImageId
-          }
-        />
+        <img className="w-50" src={IMG_URL + cloudinaryImageId} />
       </div>
       <div className="text-center">
-        <h3 className="font-bold">{name}</h3>
+        <h3 className="font-bold">{"Card Comp " + name}</h3>
         <h4>{locality}</h4>
         <h4>{cuisines.join(",")}</h4>
         <h4>{costForTwo}</h4>
@@ -32,7 +26,7 @@ export const promotCard = (Card) => {
   return (props) => {
     return (
       <div>
-        <label className="absolute bg-red-700 text-amber-50 rounded-lg m-1">
+        <label className="absolute bg-red-700 text-amber-50 rounded-lg p-1">
           Non-Vag
         </label>
         <Card {...props} />
